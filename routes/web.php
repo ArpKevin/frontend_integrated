@@ -18,18 +18,10 @@ Route::get("/comment", function () {
     return view('comment');
 })->name('comment');
 
-// Route::get("/settings", function () {
-//     return view('settings');
-// });
+Route::get("/login", function () {
+    return view('login');
+});
 
-// Route::get("/logout", function () {
-//     return view('logout');
-// });
-
-// Route::get("/login", function () {
-//     return view('login');
-// });
-
-// Route::get("/register", function () {
-//     return view('register');
-// });
+Route::get("/register", function () {
+    return view('register');
+});

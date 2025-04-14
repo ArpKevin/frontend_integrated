@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/light/comments.css" type="text/css" id="theme">
-    <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
-    <script src="javascript/themeChange.js"></script>
-    <script src="javascript/searchOpen.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/light/comments.css') }}" type="text/css" id="theme">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+    <script src="{{ asset('js/themeChange.js') }}"></script>
+    <script src="{{ asset('js/searchOpen.js') }}"></script>
     <title>Comment</title>
 </head>
 <body>
