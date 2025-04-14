@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="{{ asset('css/light/profile.css') }}" type="text/css" id="theme">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+    <script src="{{ asset('js/themeChange.js') }}"></script>
+    <script src="{{ asset('js/searchOpen.js') }}"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-icons">
+            <a href="{{ route('dashboard') }}" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="{{ asset('images/black/home.svg') }}" alt="Home icon" class="theme-icon"></span></a>
+            <a href="{{ route('profile') }}" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="{{ asset('images/black/person.svg') }}" alt="Person icon" class="theme-icon"></span></a>
+            <h1 id="navSpan">EchoMap</h1>
+            <a class="link-size searchIcon"><span class="material-symbols-outlined" data-tooltip="Search" onclick="searchOpenBttn()"><img src="{{ asset('images/black/search.svg') }}" alt="Search icon" class="theme-icon"></span></a>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
+                <img src="{{ asset('images/black/theme.svg') }}" alt="Theme Toggle" class="theme-icon">
+            </span>
+            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="{{ asset('images/black/logout.svg') }}" alt="Logout icon" class="theme-icon"></span>
+        </div>
+    </nav>
+    <div id="SearchDiv">
+        <div class="navSearchBar">
+            <input placeholder="Search..." class="input" name="text" type="text">
+            <button class="button">
+                <img src="{{ asset('images/black/search.svg') }}" alt="Search" class="theme-icon">
+            </button>
+        </div> 
+    </div>  
+    <div class="main">
+        <div class="main-container">
+            <div class="userFeed">
+                <div class="searchBar">
+                    <input placeholder="Search..." class="input" name="text" type="text">
+                    <button class="button">
+                        <img src="{{ asset('images/black/search.svg') }}" alt="Search" class="theme-icon">
+                    </button>
+                </div>
+                <hr>
+                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Your progress</span>
+                <div class="progressBar">
+                    <div class="userProgress"><span>20%</span></div>
+                </div>
+                <div class="toDoList">
+                    <ul>
+                        <li>Follow someone</li>
+                        <li>Post your first idea</li>
+                        <li>Like an idea</li>
+                        <li>Comment on an idea</li>
+                        <li style="text-decoration: line-through;">Set a banner</li>
+                    </ul>
+                </div>
+                <hr>
+                <span class="header">Who to follow</span>
+                <div class="Recommended">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>Follow</button>
+                    </div>
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>Follow</button>
+                    </div>
+                </div>
+                <span class="header" id="recentPostHeader">Recent posts by followed users</span>
+
+                <div class="recentPosts">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+        </div>
+            <div class="segitseg">
+                <div class="userProfile">
+                    <div class="backgroundImage">
+                        <div class="insideProfilePicture">
+                        </div>
+                    </div>
+                    <div class="profilePicture"></div>
+                    <div class="leftInformation">
+                        <div class="informationCenter">
+                            <img src="{{ asset('images/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        </div>
+                        <div class="informationCenter">
+                            <img src="{{ asset('images/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        </div>
+                    </div>
+                    <div class="rightInformation">
+                        <div class="informationCenter">
+                            <img src="{{ asset('images/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        </div>
+                        <div class="informationCenter">
+                            <img src="{{ asset('images/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        </div>
+                    </div>
+                    <hr id="largeScreenHr">
+                </div>
+                
+                <div class="middleInformation">
+                    <span id="birthName">GWAGWAGWA</span>
+                    <div class="userStatistics">
+                        <img src="{{ asset('images/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('images/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('images/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('images/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
+                    </div>
+                </div>
+
+                <hr id="smallScreenHr">
+
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="userPostInfo">
+                        <!-- Felhasználói profilkép -->
+                        <div class="profilePicture"></div>
+                        <!-- Felhasználónév -->
+                        <div class="usernames">
+                            <span class="birthName">@WhySoSerious</span>
+                            <span class="username">oogabooga</span>
+                        </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="{{ asset('images/black/more.svg') }}" alt="More icon" class="theme-icon">
+                        </span>
+                    </div>
+
+                    <div class="postText">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
+                    </div>
+
+                    <!-- Információ a posztról -->
+                    <div class="postInformation">
+                        <div class="likeInformation">
+                            
+                        <!-- From Uiverse.io by Tsiangana --> 
+                        <label class="ui-bookmark">
+                            <input type="checkbox" />
+                            <div class="bookmark">
+                            <svg
+                                viewBox="0 0 16 16"
+                                style="margin-top:4px"
+                                class="bi bi-heart-fill"
+                                height="25"
+                                width="25"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                            </div>
+                        </label>
+                            <span>648</span>
+                        </div>
+                        <div class="commentInformation">
+                            <img src="{{ asset('images/black/comment.svg') }}" alt="" class="theme-icon">
+                            <span>999</span>
+                        </div>
+                    </div>
+                    <button class="comments-toggle" onclick="{{ asset('js/searchOpen.js') }}">View Comments</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
