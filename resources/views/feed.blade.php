@@ -1,8 +1,18 @@
 @extends('shared.layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Feed')
 
 @section('content')
+
+<body>
+    <div id="SearchDiv">
+        <div class="navSearchBar">
+            <input placeholder="Search..." class="input" name="text" type="text">
+            <button class="button">
+                <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+            </button>
+        </div> 
+    </div>  
 
     <div class="main">
             <div class="main-container">
@@ -125,5 +135,4 @@
                 </div>
             </div>
     </div>
-</body>
 @endsection

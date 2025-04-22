@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/loginform.css') }}">
+    <link rel="stylesheet" href="./css/loginform.css">
+    <script src="javascript/password.js"></script>
     <title>Login</title>
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="./output-onlinepngtools.png" type="image/x-icon">
 </head>
 <body>
     <nav>
@@ -22,13 +23,13 @@
             <span>Password</span>
             <div class="password-container">
                 <input type="password" id="password">
-                <button class="password-btn" type="button"><img src="{{ asset('images/black/visibility.svg') }}" alt="Show Password Button"></button>
+                <button class="password-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
             </div>
             <input type="button" value="Login">
         </form>
 
-        <span id="login"><a href="register.html">Don't have an account yet?</a></span>
-        <script src="js/password.js"></script>
+        <span id="login"><a href="/register">Don't have an account yet?</a></span>
+        <script src="javascript/password.js"></script>
     </div>
 </body>
 </html>

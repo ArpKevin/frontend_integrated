@@ -33,26 +33,15 @@ nav {
 }
 
 .userFeed  {
-    background-color: #1d1d1d;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #1d1d1d;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .postPicture {
   border: 2px solid white;
 }
 
-.more-icon:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
 /* From Uiverse.io by deepak16375 */ 
-.searchBar button {
-  background-color: #0e0e0e;
-}
-
-.userFeed {
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-}
 
 .userFeed hr {
   background-color: rgba(255, 255, 255, 0.05); 
@@ -67,7 +56,7 @@ nav {
 }
 
 .userProfilePicture {
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(192, 192, 192);
 }
 
 .feedDiv {
@@ -75,11 +64,31 @@ nav {
 }
 
 .feedDiv button {
-  background-color: #1d1d1d; 
+  background-color: #3f3f3f; 
+  color: rgb(192, 192, 192);
 }
 
 .feedPicture {
   border: 2px solid rgb(255, 255, 255);
+}
+
+.searchBar input,
+.navSearchBar input {
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.searchBar input::placeholder{
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.mobileFeed .navSearchBar ::placeholder {
+  color: rgb(192, 192, 192);
+}
+
+.searchBar button, .navSearchBar button {
+  background-color: #575757;
 }
 
 @media screen and (max-width: 1160px) {
@@ -115,4 +124,8 @@ nav {
       color: black;
       background-color: rgba(175, 175, 175, 0.4);
   }
+}
+
+.mobileFeed {
+  background-color: #1d1d1d;
 }

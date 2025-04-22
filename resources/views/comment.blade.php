@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/light/comments.css') }}" type="text/css" id="theme">
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
-    <script src="{{ asset('js/themeChange.js') }}"></script>
-    <script src="{{ asset('js/searchOpen.js') }}"></script>
-    <title>Comment</title>
-</head>
-<body>
-    <nav>
-        <div class="left-icons">
-            <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="{{ asset('images/black/home.svg') }}" alt="Home icon" class="theme-icon"></span></a>
-            <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="{{ asset('images/black/person.svg') }}" alt="Person icon" class="theme-icon"></span></a>
-            <h1 id="navSpan">EchoMap</h1>
-            <a class="link-size searchIcon"><span class="material-symbols-outlined" data-tooltip="Search" onclick="searchOpenBttn()"><img src="{{ asset('images/black/search.svg') }}" alt="Search icon" class="theme-icon"></span></a>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
-                <img src="{{ asset('images/black/theme.svg') }}" alt="Theme Toggle" class="theme-icon">
-            </span>
-            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="{{ asset('images/black/logout.svg') }}" alt="Logout icon" class="theme-icon"></span>
-        </div>
-    </nav>
+@extends('shared.layout')
+
+@section('title', 'Comment')
+
+@section('content')
     <div id="SearchDiv">
         <div class="navSearchBar">
             <input placeholder="Search..." class="input" name="text" type="text">
             <button class="button">
-                <img src="{{ asset('images/black/search.svg') }}" alt="Search" class="theme-icon">
+                <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
             </button>
         </div> 
     </div>  
@@ -34,80 +15,61 @@
         <div class="main-container">
             <div class="userPosts">
                 <div class="mainComment">
-    
-                        <div class="information">
-                            <div class="profilePicture"></div>
-                            <div>
-                                <div class="username">
-                                    <span>Cservenák Dániel</span>
-                                </div>
-                                <div class="time">
-                                    <span>20 hours ago</span>
-                                </div>
+                    <div class="post">
+                        <div class="postInfo">
+                            <div class="postPicture"></div>
+                            <div class="postData">
+                                <span class="birthName">@WhySoSerious</span>
+                                <span class="time">20 hours ago</span>
                             </div>
-                            <span class="material-symbols-outlined more-icon" class="options">
-                                <img src="{{ asset('images/black/more.svg') }}" alt="More icon" class="theme-icon Options">
-                            </span>
                         </div>
-    
-                        <!-- Poszt szövege (user által írt) -->
-                        <div class="text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
-                            Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
-                            Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
-                            Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
-                            Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
+
+                        <div class="postText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
                         </div>
-        
+
                         <!-- Információ a posztról -->
-                        <div class="information">
+                        <div class="postInformation">
+                            <button><span>Edit post</span></button>
                             <div class="likeInformation">
                                 
-                            <!-- From Uiverse.io by Tsiangana --> 
-                            <label class="ui-bookmark">
-                                <input type="checkbox" />
-                                <div class="bookmark">
-                                <svg
-                                    viewBox="0 0 16 16"
-                                    style="margin-top:4px"
-                                    class="bi bi-heart-fill"
-                                    height="25"
-                                    width="25"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
-                                    fill-rule="evenodd"
-                                    ></path>
-                                </svg>
-                                </div>
-                        </label>
-                            <span>648</span>
+                                <!-- From Uiverse.io by Tsiangana --> 
+                                <label class="ui-bookmark">
+                                    <input type="checkbox" />
+                                    <div class="bookmark">
+                                    <svg
+                                        viewBox="0 0 16 16"
+                                        style="margin-top:4px"
+                                        class="bi bi-heart-fill"
+                                        height="25"
+                                        width="25"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                        fill-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                    </div>
+                                </label>
+                                <span>648</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <hr class="mainHr">
                 <div class="underComments">
                     <div class="post">
-                        <div class="information">
-                            <div class="profilePicture"></div>
-                            <div>
-                                <div class="username">
-                                    <span>WhySoSerious</span>
-                                </div>
-                                <div class="time">
-                                    <span>16 hours ago</span>
-                                </div>
+                        <div class="postInfo">
+                            <div class="postPicture"></div>
+                            <div class="postData">
+                                <span class="birthName">@WhySoSerious</span>
+                                <span class="time">20 hours ago</span>
                             </div>
-                            <span class="material-symbols-outlined more-icon" class="options">
-                                <img src="{{ asset('images/black/more.svg') }}" alt="More icon" class="theme-icon Options">
-                            </span>
                         </div>
-                        <div class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus vero, saepe ea eum rem ducimus in quo accusamus enim alias explicabo dolorum iste, voluptatum cupiditate velit? Ducimus eaque quo quod.
-                            Facilis ab voluptas voluptate recusandae facere tempore et consequuntur dolorem in tenetur optio, quia sit mollitia dignissimos iste voluptatibus veritatis molestiae, inventore assumenda incidunt, velit aliquam. Assumenda, modi. Obcaecati, inventore.
+                        <div class="postText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
                         </div>
-                    </div>
+                    </div>  
                 </div>
                 <hr>
  
@@ -116,12 +78,11 @@
                 <div class="searchBar">
                     <input placeholder="Search..." class="input" name="text" type="text">
                     <button class="button">
-                        <img src="{{ asset('images/black/search.svg') }}" alt="Search" class="theme-icon">
+                        <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection

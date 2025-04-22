@@ -23,7 +23,7 @@ function toggleTheme() {
 function updateIcons() {
     document.querySelectorAll(".theme-icon").forEach(icon => {
         const currentSrc = icon.src.split("/").pop();
-        const newIcon = isDarkMode ? `images/white/${currentSrc}` : `images/black/${currentSrc}`;
+        const newIcon = isDarkMode ? `imgs/white/${currentSrc}` : `imgs/black/${currentSrc}`;
         icon.src = newIcon;
     });
 }

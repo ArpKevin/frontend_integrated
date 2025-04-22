@@ -2,11 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-}); 
 
-Route::get("/dashboard", function () {
+Route::get("/", function () {
     return view('dashboard');
 })->name('dashboard');
 
@@ -24,4 +21,8 @@ Route::get("/login", function () {
 
 Route::get("/register", function () {
     return view('register');
+});
+
+Route::get("/feed", function () {
+    return view('feed');
 });
