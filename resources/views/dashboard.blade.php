@@ -5,57 +5,54 @@
 @section('content')
 
     <div class="main">
-            <div class="main-container">
-                @include('shared.left-sidebar')
-                
-
-                <div class="posts" style="overflow: auto; height: inherit">
-                    @include('shared.success-message')
-                    @include('shared.submit-idea')
+        <div class="main-container">
+            @include('shared.left-sidebar')
 
 
-                    <div class="mobileFeed">
-                        <div class="navSearchBar">
-                            <input placeholder="Search..." class="input" name="text" type="text">
-                            <button class="button">
-                                <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
-                            </button>
+            <div class="posts" style="overflow: auto; height: inherit">
+                @include('shared.success-message')
+                @include('shared.submit-idea')
+                <div class="mobileFeed">
+                    <div class="navSearchBar">
+                        <input placeholder="Search..." class="input" name="text" type="text">
+                        <button class="button">
+                            <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+                        </button>
+                    </div>
+                    <ul>
+                        <li>Follow someone</li>
+                        <li>Post your first idea</li>
+                        <li>Like an idea</li>
+                        <li>Comment on an idea</li>
+                        <li style="text-decoration: line-through;">Set a banner</li>
+                    </ul>
+                    <span class="header">Top users</span>
+                    <div class="feedDiv" id="recommendations">
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
+                            </div>
+                            <button>Follow</button>
                         </div>
-                        <ul>
-                            <li>Follow someone</li>
-                            <li>Post your first idea</li>
-                            <li>Like an idea</li>
-                            <li>Comment on an idea</li>
-                            <li style="text-decoration: line-through;">Set a banner</li>
-                        </ul>
-                        <span class="header">Top users</span>
-                        <div class="feedDiv" id="recommendations">
-                            <div class="user">
-                                <div class="feedPicture"></div>
-                                <div class="feedName">
-                                    <p>@Username</p>
-                                </div>
-                                <button>Follow</button>
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
                             </div>
-                            <div class="user">
-                                <div class="feedPicture"></div>
-                                <div class="feedName">
-                                    <p>@Username</p>
-                                </div>
-                                <button>Follow</button>
-                            </div>
+                            <button>Follow</button>
                         </div>
                     </div>
-                    <div class="idea-card">
+                </div>
+                <div class="idea-card">
                     @forelse($ideas as $idea)
-                       @include('shared.idea-card')
+                        @include('shared.idea-card')
                     @empty
                         <p class="text-center mt-4">No results found.</p>
                     @endforelse
-                    </div>
                     {{ $ideas->withQueryString()->links() }}
                 </div>
             </div>
+        </div>
     </div>
-</body>
 @endsection
