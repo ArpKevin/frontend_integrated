@@ -2,7 +2,7 @@
 
 @section('title', 'Register')
 
-@section('login-form')
+@section('loginform-css')
     <link rel="stylesheet" href="/css/loginform.css">
 @endsection
 
