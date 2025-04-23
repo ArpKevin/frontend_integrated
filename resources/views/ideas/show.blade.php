@@ -11,7 +11,6 @@
 
             <div class="posts" style="overflow: auto; height: inherit">
                 @include('shared.success-message')
-                @include('shared.submit-idea')
                 <div class="mobileFeed">
                     <div class="navSearchBar">
                         <input placeholder="Search..." class="input" name="text" type="text">
@@ -47,6 +46,9 @@
                 <div class="idea-card">
                     @include('shared.idea-card')
                 </div>
+                <hr class="mainHr">
+                @include('shared.submit-comment')
+                @include('ideas.shared.comments-box')
             </div>
         </div>
     </div>
