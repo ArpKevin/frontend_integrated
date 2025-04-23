@@ -7,7 +7,12 @@
     <div class="main">
             <div class="main-container">
                 @include('shared.left-sidebar')
+                
+
                 <div class="posts">
+                    @include('shared.submit-idea')
+
+
                     <div class="mobileFeed">
                         <div class="navSearchBar">
                             <input placeholder="Search..." class="input" name="text" type="text">

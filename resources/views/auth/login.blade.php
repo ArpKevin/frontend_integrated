@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/loginform.css">
-    <script src="javascript/password.js"></script>
     <title>Login</title>
     <link rel="shortcut icon" href="./output-onlinepngtools.png" type="image/x-icon">
 </head>
@@ -28,7 +27,7 @@
             <input type="button" value="Login">
         </form>
 
-        <span id="login"><a href="/register">Don't have an account yet?</a></span>
+        <span id="login"><a href="{{ route('register') }}">Don't have an account yet?</a></span>
         <script src="javascript/password.js"></script>
     </div>
 </body>

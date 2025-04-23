@@ -32,7 +32,7 @@
             <input type="button" value="Register">
         </form>
 
-        <span id="login"><a href="/login">Already have an account?</a></span>
+        <span id="login"><a href="{{ route('login') }}">Already have an account?</a></span>
 
     </div>
     <script src="js/password.js"></script>
