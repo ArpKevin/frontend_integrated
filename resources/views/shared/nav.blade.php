@@ -11,7 +11,14 @@
             <a href="{{ route('register') }}" class="link-size"><span class="material-symbols-outlined" data-tooltip="Register"><img src="imgs/black/register.svg" alt="Register icon" class="theme-icon"></span></a>
         @endguest
         @auth
-            <a href="{{ route('logout') }}" class="link-size"><span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="imgs/black/logout.svg" alt="Logout icon" class="theme-icon"></span></a>
+            {{-- <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button style="border: none; outline: none; background: none;" type="submit" class="link-size"><span class="material-symbols-outlined" data-tooltip="Logout"><img src="imgs/black/logout.svg" alt="Logout icon" class="theme-icon"></span></button>
+            </form> --}}
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <a class="link-size" onclick="this.closest('form').submit();" data-tooltip="Logout"><span class="material-symbols-outlined"><img src="imgs/black/logout.svg" alt="Logout icon" class="theme-icon"></span></a>
+            </form>
         @endauth
     </div>
 </nav>

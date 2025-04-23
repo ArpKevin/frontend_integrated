@@ -6,16 +6,24 @@
     <div class="formDiv">
 
         <span class="header">Login</span>
-
-        <form action="">
-            <span>Username</span>
-            <input type="text" name="username" id="username">
+        @include('shared.success-message')
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
+            <span>Email</span>
+            <input type="email" name="email" id="email">
+            @error('email')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
             <span>Password</span>
             <div class="password-container">
-                <input type="password" id="password">
-                <button class="password-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
+                <input type="password" name="password" id="password">
+                <button class="password-btn" type="button"><img src="imgs/black/visibility.svg"
+                        alt="Show Password Button"></button>
             </div>
-            <input type="button" value="Login">
+            @error('password')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
+            <input type="submit" value="Login">
         </form>
 
         <span id="register"><a href="{{ route('register') }}">Don't have an account yet?</a></span>

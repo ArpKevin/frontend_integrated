@@ -10,6 +10,7 @@
                 
 
                 <div class="posts">
+                    @include('shared.success-message')
                     @include('shared.submit-idea')
 
 

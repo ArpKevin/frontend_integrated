@@ -7,22 +7,35 @@
 
         <span class="header">Register</span>
 
-        <form action="">
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
             <span>Username</span>
-            <input type="text" name="username" id="username">
+            <input type="text" name="name" id="name">
+            @error('name')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
             <span>Email</span>
             <input type="email" name="email" id="email">
+            @error('email')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
             <span>Password</span>
             <div class="password-container">
-                <input type="password" id="password" maxlength="20">
+                <input type="password" id="password" name="password" maxlength="20">
                 <button class="password-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
             </div>
+            @error('password')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
             <span>Confirm Password</span>
             <div class="password-confirmation-container">
-                <input type="password" id="password_confirmation" maxlength="20">
+                <input type="password" id="password_confirmation" name="password_confirmation" maxlength="20">
                 <button class="password-confirmation-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
             </div>
-            <input type="button" value="Register">
+            @error('password')
+                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+            @enderror
+            <input type="submit" value="Register">
         </form>
 
         <span id="login"><a href="{{ route('login') }}">Already have an account?</a></span>

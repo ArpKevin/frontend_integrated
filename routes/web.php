@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\IdeaController;
 
 
 Route::get("/", function () {
@@ -19,10 +21,11 @@ Route::get("/feed", function () {
     return view('feed');
 })->name('feed');
 
-Route::get("/login", function () {
-    return view('auth.login');
-})->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'store']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get("/register", function () {
-    return view('auth.register');
-})->name('register');
+Route::resource('ideas', IdeaController::class)->except('index','create','show')->middleware('auth');
+Route::resource('ideas', IdeaController::class)->only('show');
