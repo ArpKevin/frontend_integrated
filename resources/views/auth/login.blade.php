@@ -21,7 +21,7 @@
             <span>Password</span>
             <div class="password-container">
                 <input type="password" name="password" id="password">
-                <button class="password-btn" type="button"><img src="imgs/black/visibility.svg"
+                <button class="password-btn" type="button"><img src="{{ asset('imgs/black/visibility.svg') }}"
                         alt="Show Password Button"></button>
             </div>
             @error('password')

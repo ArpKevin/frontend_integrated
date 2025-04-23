@@ -7,7 +7,7 @@
         <div class="navSearchBar">
             <input placeholder="Search..." class="input" name="text" type="text">
             <button class="button">
-                <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+                <img src="{{ asset('imgs/black/search.svg') }}" alt="Search" class="theme-icon">
             </button>
         </div> 
     </div>  
@@ -22,18 +22,18 @@
                     <div class="profilePicture"></div>
                     <div class="leftInformation">
                         <div class="informationCenter">
-                            <img src="imgs/black/lightbulb.svg" alt="" class="theme-icon"><span>10</span>
+                            <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
                         </div>
                         <div class="informationCenter">
-                            <img src="imgs/black/person.svg" alt="" class="theme-icon"><span>10</span>
+                            <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
                         </div>
                     </div>
                     <div class="rightInformation">
                         <div class="informationCenter">
-                            <img src="imgs/black/favorite.svg" alt="" class="theme-icon"><span>10</span>
+                            <img src="{{ asset('imgs/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
                         </div>
                         <div class="informationCenter">
-                            <img src="imgs/black/comment.svg" alt="" class="theme-icon"><span>10</span>
+                            <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,10 @@
 
                 <div class="middleInformation">
                     <div class="userStatistics">
-                        <img src="imgs/black/lightbulb.svg" alt="" class="theme-icon"><span>10</span>
-                        <img src="imgs/black/person.svg" alt="" class="theme-icon"><span>10</span>
-                        <img src="imgs/black/favorite.svg" alt="" class="theme-icon"><span>10</span>
-                        <img src="imgs/black/comment.svg" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('imgs/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
+                        <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
                     <div class="navSearchBar">
                         <input placeholder="Search..." class="input" name="text" type="text">
                         <button class="button">
-                            <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+                            <img src="{{ asset('imgs/black/search.svg') }}" alt="Search" class="theme-icon">
                         </button>
                     </div>
                     <ul>

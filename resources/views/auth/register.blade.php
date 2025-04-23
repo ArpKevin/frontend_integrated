@@ -26,7 +26,7 @@
             <span>Password</span>
             <div class="password-container">
                 <input type="password" id="password" name="password" maxlength="20">
-                <button class="password-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
+                <button class="password-btn" type="button"><img src="{{ asset('imgs/black/visibility.svg') }}" alt="Show Password Button"></button>
             </div>
             @error('password')
                 <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
@@ -34,7 +34,7 @@
             <span>Confirm Password</span>
             <div class="password-confirmation-container">
                 <input type="password" id="password_confirmation" name="password_confirmation" maxlength="20">
-                <button class="password-confirmation-btn" type="button"><img src="imgs/black/visibility.svg" alt="Show Password Button"></button>
+                <button class="password-confirmation-btn" type="button"><img src="{{ asset('imgs/black/visibility.svg') }}" alt="Show Password Button"></button>
             </div>
             @error('password')
                 <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>

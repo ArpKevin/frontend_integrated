@@ -37,6 +37,6 @@
             <span>{{ $idea->likes->count() }}</span>
         </div>
     </div>
-    <button class="comments-toggle"><a href="{{ route('comment') }}">View Comments</a></button>
+    <button class="comments-toggle"><a href="{{ route('ideas.show', $idea->id) }}">View</a></button>
 </div>
 

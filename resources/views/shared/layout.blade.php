@@ -13,13 +13,13 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="css/universal.css">
-    <link rel="stylesheet" href="css/profileuniversal.css">
+    <link rel="stylesheet" href="{{ asset('css/universal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profileuniversal.css') }}">
     @yield('loginform-css')
     
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
-    <script src="javascript/themeChange.js"></script>
-    <script src="javascript/password.js"></script>
+    <link rel="icon" type="image/x-icon" href="{{ asset('imgs/favicon.png') }}">
+    <script src="{{ asset('javascript/themeChange.js') }}"></script>
+    <script src="{{ asset('javascript/password.js') }}"></script>
 </head>
 
 <body>

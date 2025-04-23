@@ -1,6 +1,6 @@
 @extends('shared.layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Idea ' . $idea->id)
 
 @section('content')
 
@@ -45,12 +45,7 @@
                     </div>
                 </div>
                 <div class="idea-card">
-                    @forelse($ideas as $idea)
-                        @include('shared.idea-card')
-                    @empty
-                        <p class="text-center mt-4">No results found.</p>
-                    @endforelse
-                    {{ $ideas->withQueryString()->links() }}
+                    @include('shared.idea-card')
                 </div>
             </div>
         </div>
