@@ -3,11 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\DashboardController;
 
 
-Route::get("/", function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get("/", [DashboardController::class, "index"])->name('dashboard');
 
 Route::get("/profile", function () {
     return view('profile');
