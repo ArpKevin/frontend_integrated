@@ -5,14 +5,14 @@
     <div class="user">
         <div class="feedPicture"></div>
         <div class="feedName">
-            <p>@Username</p>
+            <p style="margin-bottom: 0">@Username</p>
         </div>
         <button>Follow</button>
     </div>
     <div class="user">
         <div class="feedPicture"></div>
         <div class="feedName">
-            <p>@Username</p>
+            <p style="margin-bottom: 0">@Username</p>
         </div>
         <button>Follow</button>
     </div>
