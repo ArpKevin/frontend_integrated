@@ -2,6 +2,10 @@
 
 @section('title', 'Login')
 
+@section('login-form')
+    <link rel="stylesheet" href="/css/loginform.css">
+@endsection
+
 @section('content')
     <div class="formDiv">
 

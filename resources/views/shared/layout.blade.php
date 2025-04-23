@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/universal.css">
     <link rel="stylesheet" href="css/profileuniversal.css">
-    <link rel="stylesheet" href="/css/loginform.css">
+    @yield('login-form')
     <link rel="stylesheet" href="/css/universal.css">
     
     <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
