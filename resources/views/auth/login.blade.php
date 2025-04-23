@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/loginform.css">
-    <title>Login</title>
-    <link rel="shortcut icon" href="./output-onlinepngtools.png" type="image/x-icon">
-</head>
-<body>
-    <nav>
-        <h1>EchoMap</h1>
-    </nav>
+@extends('shared.layout')
 
+@section('title', 'Login')
+
+@section('content')
     <div class="formDiv">
 
         <span class="header">Login</span>
@@ -27,8 +18,6 @@
             <input type="button" value="Login">
         </form>
 
-        <span id="login"><a href="{{ route('register') }}">Don't have an account yet?</a></span>
-        <script src="javascript/password.js"></script>
+        <span id="register"><a href="{{ route('register') }}">Don't have an account yet?</a></span>
     </div>
-</body>
-</html>
+@endsection

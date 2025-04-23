@@ -92,7 +92,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
     font-size: 16px;
 }
 
-#login {
+#login, #register {
     cursor: pointer;
     font-size: 14px;
     font-style: italic;
@@ -106,7 +106,8 @@ a {
 
 /* https://uiverse.io/Yaya12085/evil-chipmunk-15 */
 
-.password-container {
+.password-container,
+.password-confirmation-container {
     position: relative;
     display: flex;
     height: 2.8rem;
@@ -116,7 +117,8 @@ a {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
 }
   
-.password-container input {
+.password-container input,
+.password-confirmation-container input {
     height: 100%;
     width: 100%;
     border-radius: 8px;
@@ -130,11 +132,13 @@ a {
     transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
 }
   
-.password-container input:focus {
+.password-container input:focus,
+.password-confirmation-container input:focus {
     border: 1px solid rgb(155, 155, 155);
 }
   
-.password-btn {
+.password-btn,
+.password-confirmation-btn {
     position: absolute;
     width: 65px;
     right: 4px;

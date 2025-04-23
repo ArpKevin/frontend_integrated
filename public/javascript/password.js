@@ -1,17 +1,23 @@
-function showPassword(event) {
-    const passwordInput = document.querySelector('.password-container input');
-    if (event.type === "mousedown") {
-        passwordInput.type = "text";
-    } else {
-        passwordInput.type = "password";
+window.addEventListener('load', function () {
+    function togglePasswordVisibility(event, inputSelector) {
+        const passwordInput = document.querySelector(inputSelector);
+        if (event.type === "mousedown") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
     }
-}
 
-const passwordButton = document.querySelector('.password-btn');
-if (passwordButton) {
-    passwordButton.addEventListener('mousedown', showPassword);
-    passwordButton.addEventListener('mouseup', showPassword);
-    passwordButton.addEventListener('mouseleave', showPassword);
-}
+    const passwordButton = document.querySelector('.password-btn');
+    const passwordConfirmationButton = document.querySelector('.password-confirmation-btn');
 
-console.log("anyad");
+    if (passwordButton) {
+        passwordButton.addEventListener('mousedown', (event) => togglePasswordVisibility(event, '.password-container input'));
+        passwordButton.addEventListener('mouseup', (event) => togglePasswordVisibility(event, '.password-container input'));
+    }
+    
+    if (passwordConfirmationButton) {
+        passwordConfirmationButton.addEventListener('mousedown', (event) => togglePasswordVisibility(event, '.password-confirmation-container input'));
+        passwordConfirmationButton.addEventListener('mouseup', (event) => togglePasswordVisibility(event, '.password-confirmation-container input'));
+    }
+});
