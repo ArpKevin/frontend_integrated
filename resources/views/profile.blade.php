@@ -13,7 +13,7 @@
     </div>  
     <div class="main">
         <div class="main-container">
-            @include('shared.left-sidebar')
+            @include('shared.right-sidebar')
             <div class="userDiv">
                 <div class="userProfile">
                     <div class="backgroundImage">

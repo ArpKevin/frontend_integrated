@@ -16,7 +16,7 @@
 
     <div class="main">
             <div class="main-container">
-                @include('shared.left-sidebar')
+                @include('shared.right-sidebar')
                 <div class="posts">
                     <div class="mobileFeed">
                         <div class="navSearchBar">

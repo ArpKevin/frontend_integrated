@@ -6,7 +6,7 @@
 
     <div class="main">
         <div class="main-container">
-            @include('shared.left-sidebar')
+            @include('shared.right-sidebar')
 
 
             <div class="posts" style="overflow: auto; height: inherit">
