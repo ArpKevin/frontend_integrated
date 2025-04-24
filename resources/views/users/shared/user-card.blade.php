@@ -1,9 +1,12 @@
 <div class="userDiv">
+    @include('shared.success-message')
     <div class="userProfile">
         <div class="backgroundImage">
-            <div class="insideProfilePicture"></div>
+            <div class="insideProfilePicture" style="background-image: url('{{ $user->getImageURL() }}')">
+            </div>
         </div>
-        <div class="profilePicture"></div>
+        <div class="profilePicture" style="background-image: url('{{ $user->getImageURL() }}')">
+        </div>
         <div class="leftInformation">
             <div class="informationCenter">
                 <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
@@ -23,6 +26,8 @@
     </div>
     
     <span id="birthName">{{ $user->name }}</span>
+
+    <p class="text-center mt-4">Bio: {{ $user->bio }}</p>
 
     <div class="profileButtons">
         <button id="profileEdit"><a href="{{ route('users.edit', $user->id) }}">Edit profile</a></button>

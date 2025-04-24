@@ -37,7 +37,7 @@ class UserController extends Controller
 
         $user->update($validated);
 
-        return redirect()->route("profile");
+        return redirect()->route("profile")->with('success','Profile was updated successfully.');
     }
 
     public function profile(){

@@ -2,10 +2,10 @@
     @forelse ($idea->comments->sortByDesc('created_at') as $comment)
         <div class="post">
             <div class="postInfo">
-                <div class="postPicture"></div>
+                <div class="postPicture" style="background-image: url('{{ $comment->user->getImageURL() }}')"></div>
                 <div class="postData">
                     <span class="birthName"><a href="{{ route('users.show', $comment->user->id) }}">{{ $comment->user->name }}</a></span>
-                    <span class="time">{{ $idea->created_at->diffForHumans() }}</span>
+                    <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
                 </div>
             </div>
         </div>

@@ -16,27 +16,22 @@
                             @enderror
                         </div>
                     </div>
-                    <div>
-                        @if (auth()->id() === $user->id)
-                            <a href="{{ route('users.show', $user->id) }}">View</a>
-                        @endif
-                    </div>
                 </div>
                 <div class="mt-4">
-                    <label for="">Profile picture</label>
+                    <label for="image" class="form-label">Profile picture</label>
                     <input name="image" type="file" class="form-control">
                     @error('image')
                         <span class="text-danger fs-6">{{ $message }}</span>
                     @enderror
                 </div>
-                <div class="px-2 mt-4">
+                <div class="mt-4">
                     <h5 class="fs-5"> Bio: </h5>
-
                     <div class="mb-3">
-                        <textarea name="bio" class="form-control" id="bio" rows="3">{{$user->bio}}</textarea>
+                        <textarea name="bio" class="form-control" id="bio" rows="3" oninput="document.getElementById('charCount').innerText = `${this.value.length}/255`">{{$user->bio}}</textarea>
                         @error('bio')
                             <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
                         @enderror
+                        <span id="charCount">0/255</span>
                     </div>
                     <button class="btn btn-dark btn-sm mb-3">Save</button>
                     {{-- @include('users.shared.user-stats') --}}
@@ -49,7 +44,7 @@
         <div class="navSearchBar">
             <input placeholder="Search..." class="input" name="text" type="text">
             <button class="button">
-                <img src="http://127.0.0.1:8000/imgs/black/search.svg" alt="Search" class="theme-icon">
+                <img src={{ asset('imgs/black/search.svg') }} alt="Search" class="theme-icon">
             </button>
         </div>
         <ul>

@@ -129,7 +129,6 @@ nav .nav-icons {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('../../imgs/jonkler.webp');
 }
 
 .searchBar {
@@ -311,7 +310,6 @@ nav .nav-icons {
 }
 
 .userProfilePicture {
-    background-image: url('../imgs/jonkler.webp'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -467,7 +465,6 @@ a {
 }
 
 .feedPicture {
-    background-image: url('../../imgs/jonkler.webp'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -782,7 +779,6 @@ a {
       display: none;
     }
     .insideProfilePicture {
-      background-image: url('../../imgs/jonkler.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

@@ -165,7 +165,6 @@ a {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('../../jonkler.webp');
 }
 
 .postUsername {
@@ -258,7 +257,6 @@ a {
 }
 
 .feedPicture {
-    background-color: red;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -279,7 +277,6 @@ a {
     z-index: 2;
     grid-row: 2/4;
     grid-column: 4/6;
-    background-color: red;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -377,7 +374,6 @@ a {
 }
 
 .userProfilePicture {
-    background-image: url('../../jonkler.webp'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -430,7 +426,6 @@ font-size: 15px;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('../../jonkler.webp');
     border-radius: 100%;
     overflow: hidden; /* A divből való "kifolyás" blokkolása */
     border: 2px solid black;
@@ -571,8 +566,7 @@ font-size: 15px;
     width: 100%;
 }
 
-.recentPostPfp {
-    background-image: url('../../jonkler.webp'); 
+.recentPostPfp { 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -670,8 +664,7 @@ font-size: 15px;
     height: 65px; 
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
-    background-color: red;
+    background-repeat: no-repeat;
 }
 
 
@@ -766,7 +759,6 @@ font-size: 15px;
       display: none;
     }
     .insideProfilePicture {
-      background-image: url('../../imgs/jonkler.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

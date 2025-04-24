@@ -341,7 +341,6 @@ nav .left-icons {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-image: url('../../jonkler.webp');
 }
 
 .head {
@@ -453,7 +452,6 @@ transition: background-color 0.2s;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-image: url('../../jonkler.webp');
 }
 
 .underComments .post .username {
@@ -704,8 +702,7 @@ transition: background-color 0.2s;
   height: 65px; 
   background-size: cover; 
   background-position: center; 
-  background-repeat: no-repeat; 
-  background-image: url('../../imgs/jonkler.webp');
+  background-repeat: no-repeat;
 }
 
 .postData {

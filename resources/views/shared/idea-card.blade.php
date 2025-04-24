@@ -1,6 +1,6 @@
 <div class="post">
     <div class="postInfo">
-        <div class="postPicture"></div>
+        <div class="postPicture" style="background-image: url('{{ $idea->user->getImageURL() }}')"></div>
         <div class="postData">
             <span class="birthName"><a href="{{ route('users.show', $idea->user->id) }}">{{ $idea->user->name }}</a></span>
             <span class="time">{{ $idea->created_at->diffForHumans() }}</span>
