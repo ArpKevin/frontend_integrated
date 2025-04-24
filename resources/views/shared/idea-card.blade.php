@@ -11,9 +11,22 @@
         {{ $idea->content }}
     </div>
 
+    <button class="comments-toggle"><a href="{{ route('ideas.show', $idea->id) }}">View</a></button>
+
     <!-- Információ a posztról -->
     <div class="postInformation">
-        <button><span>Edit post</span></button>
+        @if(auth()->check() && (auth()->id() === $idea->user_id || auth()->user()->is_admin))
+            <form action="{{ route('ideas.edit', $idea->id) }}" method="GET">
+                <button><span>Edit post</span></button>
+            </form>
+        @endif
+        @if(auth()->check() && (auth()->id() === $idea->user_id || auth()->user()->is_admin))
+            <form action="{{ route('ideas.destroy', $idea->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button style="background-color: red; color: white;" onclick="return confirm('Are you sure you want to delete this post?')"><span>Delete post</span></button>
+            </form>
+        @endif
         <div class="likeInformation">
             
             <!-- From Uiverse.io by Tsiangana --> 
@@ -37,6 +50,6 @@
             <span>{{ $idea->likes->count() }}</span>
         </div>
     </div>
-    <button class="comments-toggle"><a href="{{ route('ideas.show', $idea->id) }}">View</a></button>
+    
 </div>
 

@@ -21,6 +21,7 @@ class UserController extends Controller
         return view("users.show", compact("user", "ideas"));
     }
     public function edit(User $user){
+        
         $ideas = $user->ideas()->latest()->paginate(5);
 
         return view("users.edit", compact("user", "ideas"));

@@ -33,8 +33,8 @@
                         @enderror
                         <span id="charCount">0/255</span>
                     </div>
-                    <button class="btn btn-dark btn-sm mb-3">Save</button>
-                    {{-- @include('users.shared.user-stats') --}}
+                    <button class="btn btn-dark btn-sm">Save</button>
+                    <button type="button" class="btn btn-secondary btn-sm"  style="background-color: red;" onclick="window.location.href='{{ route('profile') }}'"> Cancel </button>
                 </div>
             </form>
         </div>

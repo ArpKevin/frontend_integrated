@@ -28,7 +28,7 @@ class IdeaController extends Controller
         //     abort(404);
         // }
 
-        $this->authorize('idea.edit', $idea);
+        // $this->authorize('idea.edit', $idea);
 
         $editing_idea = true;
 
@@ -39,7 +39,7 @@ class IdeaController extends Controller
     {
         $idea = Idea::findOrFail($id);
 
-        $this->authorize('idea.edit', $idea);
+        // $this->authorize('idea.edit', $idea);
 
         $validated = $request->validated();
 
