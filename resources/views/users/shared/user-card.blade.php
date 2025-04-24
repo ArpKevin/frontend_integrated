@@ -30,7 +30,21 @@
     <p class="text-center mt-4">Bio: {{ $user->bio }}</p>
 
     <div class="profileButtons">
-        <button id="profileEdit"><a href="{{ route('users.edit', $user->id) }}">Edit profile</a></button>
+        @if (auth()->check() && auth()->user()->id === $user->id)
+            <button id="profileEdit"><a href="{{ route('users.edit', $user->id) }}">Edit profile</a></button>
+        @else
+            @if (auth()->user()->follows($user))
+                <form action="{{ route('users.unfollow', $user->id) }}" method="POST">
+                    @csrf
+                    <button id="profileFollow" style="background-color: red;">Unfollow</button>
+                </form>
+            @else
+                <form action="{{ route('users.follow', $user->id) }}" method="POST">
+                    @csrf
+                    <button id="profileFollow">Follow</button>
+                </form>
+            @endif
+        @endif
     </div>
 
     <hr id="largeScreenHr">
