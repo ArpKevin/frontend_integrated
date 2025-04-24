@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->authorizeResource(User::class, 'user', ['except' => ['show', 'profile']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->authorizeResource(User::class, 'user', ['except' => ['show', 'profile']]);
+    // }
 
     // duplicate compact('ideas') in show() and edit() to be refactored
     public function show(User $user){
@@ -23,8 +23,7 @@ class UserController extends Controller
     public function edit(User $user){
         $ideas = $user->ideas()->latest()->paginate(5);
 
-        $editing = true;
-        return view("users.edit", compact("user", "editing", "ideas"));
+        return view("users.edit", compact("user", "ideas"));
     }
     public function update(UpdateUserRequest $request, User $user){
         $validated = $request->validated();

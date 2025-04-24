@@ -15,7 +15,6 @@
         <div class="main-container">
             @include('shared.right-sidebar')
             @include('users.shared.user-card')
-            @include('ideas.show')
         </div>
     </div>
 @endsection

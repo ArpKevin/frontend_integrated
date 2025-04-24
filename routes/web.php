@@ -10,7 +10,7 @@ use App\Http\Controllers\UserController;
 
 Route::get("/", [DashboardController::class, "index"])->name('dashboard');
 
-Route::get('profile', [UserController::class,'profile'])->middleware('auth')->name('profile');
+Route::get('/profile', [UserController::class,'profile'])->middleware('auth')->name('profile');
 
 Route::get("/feed", function () {
     return view('feed');

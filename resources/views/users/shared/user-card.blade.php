@@ -22,10 +22,10 @@
         </div>
     </div>
     
-    <span id="birthName">GWAGWAGWA</span>
+    <span id="birthName">{{ $user->name }}</span>
 
     <div class="profileButtons">
-        <button id="profileEdit">Edit profile</button>
+        <button id="profileEdit"><a href="{{ route('users.edit', $user->id) }}">Edit profile</a></button>
     </div>
 
     <hr id="largeScreenHr">
@@ -72,6 +72,15 @@
                 <button>Follow</button>
             </div>
         </div>
+    </div>
+
+    <div class="idea-card">
+        @forelse($ideas as $idea)
+            @include('shared.idea-card')
+        @empty
+            <p class="text-center mt-4">No results found.</p>
+        @endforelse
+        {{ $ideas->withQueryString()->links() }}
     </div>
 
     <hr id="smallScreenHr">

@@ -2,7 +2,7 @@
     <div class="postInfo">
         <div class="postPicture"></div>
         <div class="postData">
-            <span class="birthName">{{ $idea->user->name }}</span>
+            <span class="birthName"><a href="{{ route('users.show', $idea->user->id) }}">{{ $idea->user->name }}</a></span>
             <span class="time">{{ $idea->created_at->diffForHumans() }}</span>
         </div>
     </div>

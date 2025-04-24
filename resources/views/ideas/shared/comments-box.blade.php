@@ -4,8 +4,9 @@
             <div class="postInfo">
                 <div class="postPicture"></div>
                 <div class="postData">
-                    <span class="birthName">{{ $comment->user->name }}</span>
-                <span class="time">{{ $idea->created_at->diffForHumans() }}</span>
+                    <span class="birthName"><a href="{{ route('users.show', $comment->user->id) }}">{{ $comment->user->name }}</a></span>
+                    <span class="time">{{ $idea->created_at->diffForHumans() }}</span>
+                </div>
             </div>
         </div>
         <div class="postText">

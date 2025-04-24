@@ -5,11 +5,10 @@
             <textarea name="comment_content" class="fs-6 form-control" rows="1"></textarea>
         </div>
         @error('comment_content')
-            <span>{{ $message }}</span>
+            <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
         @enderror
         <div>
             <button class="btn btn-primary btn-sm" type="submit"> Post Comment </button>
-
         </div>
     </form>
 @endauth
