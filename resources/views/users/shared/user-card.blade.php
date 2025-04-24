@@ -9,18 +9,18 @@
         </div>
         <div class="leftInformation">
             <div class="informationCenter">
-                <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
+                <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>{{ $user->followers()->count() }}</span>
             </div>
             <div class="informationCenter">
-                <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
+                <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>{{ $user->ideas()->count() }}</span>
             </div>
         </div>
         <div class="rightInformation">
             <div class="informationCenter">
-                <img src="{{ asset('imgs/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
+                <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>{{ $user->comments()->count() }}</span>
             </div>
             <div class="informationCenter">
-                <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
+                <img src="{{ asset('imgs/black/pin.svg') }}" alt="" class="theme-icon"><span style="color: {{ $user->pins()->count() === $totalPins ? 'green' : 'black' }}">{{ $user->pins()->count() }}/{{ $totalPins }}</span>
             </div>
         </div>
     </div>
@@ -53,10 +53,10 @@
 
     <div class="middleInformation">
         <div class="userStatistics">
-            <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>10</span>
-            <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>10</span>
-            <img src="{{ asset('imgs/black/favorite.svg') }}" alt="" class="theme-icon"><span>10</span>
-            <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>10</span>
+            <img src="{{ asset('imgs/black/person.svg') }}" alt="" class="theme-icon"><span>{{ $user->followers()->count() }}</span>
+            <img src="{{ asset('imgs/black/lightbulb.svg') }}" alt="" class="theme-icon"><span>{{ $user->ideas()->count() }}</span>
+            <img src="{{ asset('imgs/black/comment.svg') }}" alt="" class="theme-icon"><span>{{ $user->comments()->count() }}</span>
+            <img src="{{ asset('imgs/black/pin.svg') }}" alt="" class="theme-icon"><span style="color: {{ $user->pins()->count() === $totalPins ? 'green' : 'black' }}">{{ $user->pins()->count() }}/{{ $totalPins }}</span>
         </div>
     </div>
 
