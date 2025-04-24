@@ -6,6 +6,7 @@ use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\IdeaLikeController;
 
 
 Route::get("/", [DashboardController::class, "index"])->name('dashboard');
@@ -28,3 +29,6 @@ Route::resource('ideas', IdeaController::class)->only('show');
 Route::resource('ideas.comments', CommentController::class)->only('store')->middleware('auth');
 
 Route::resource('users', UserController::class)->only('show', 'edit', 'update');
+
+Route::post('ideas/{idea}/like', [IdeaLikeController::class, 'like'])->middleware('auth')->name('ideas.like');
+Route::post('ideas/{idea}/unlike', [IdeaLikeController::class, 'unlike'])->middleware('auth')->name('ideas.unlike');
