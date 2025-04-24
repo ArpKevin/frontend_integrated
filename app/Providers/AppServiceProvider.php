@@ -2,8 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Models\User;
+use Illuminate\Support\Facades\Cache;
+use Carbon\Carbon;
+use App\View\Composers\TopUserComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+        View::composer(['*'], TopUserComposer::class);
     }
 }

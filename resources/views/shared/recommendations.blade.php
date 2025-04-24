@@ -1,19 +1,15 @@
-<span class="header">Who to follow</span>
+<span class="header">Top users</span>
 
 <div class="feedDiv" id="recommendations">
 
-    <div class="user">
-        <div class="feedPicture"></div>
-        <div class="feedName">
-            <p style="margin-bottom: 0">@Username</p>
+    @forelse($topUsers as $topUser)
+        <div class="user">
+            <div class="feedPicture" style="background-image: url('{{ $topUser->getImageURL() }}')"></div>
+            <div class="feedName">
+                <p style="margin-bottom: 0"><a href="{{ route('profile', $topUser->id) }}">{{ $topUser->name }}</a></p>
+            </div>
         </div>
-        <button>Follow</button>
-    </div>
-    <div class="user">
-        <div class="feedPicture"></div>
-        <div class="feedName">
-            <p style="margin-bottom: 0">@Username</p>
-        </div>
-        <button>Follow</button>
-    </div>
+    @empty
+        <p class="text-center" style="margin: 0">No results found.</p>
+    @endforelse
 </div>
