@@ -1,15 +1,12 @@
-<span class="header">Your progress</span>
+<span class="header">Your Pin Progress</span>
 
-    <div class="progressBar">
-        <div class="userProgress"><span>20%</span></div>
+<div class="progressBar">
+    <div class="userProgress" style="width: {{ $progressPercentage }}%; background-color: {{ $progressPercentage === 100 ? 'green' : 'rgb(145, 145, 145)' }};">
     </div>
+</div>
 
-    <div class="toDoList">
-        <ul>
-            <li>Set a profile picture</li>
-            <li>Set a banner</li>
-            <li>Like an idea</li>
-            <li>Comment on an idea</li>
-            <li>Post your first idea</li>
-        </ul>
-    </div>
+<div style="text-align: center;">
+    <span id="progressText">
+        {{ $userPinsCount }} / {{ $totalPins }}
+    </span>
+</div>

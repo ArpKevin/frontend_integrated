@@ -171,13 +171,11 @@ nav .nav-icons {
     width: 100%; 
     height: 27px; 
     background-color: rgb(65, 65, 65); 
-    border-radius: 50px; 
-    margin-bottom: 20px; 
+    border-radius: 50px;
     padding: 5px;
 }
 
 .userProgress {
-    width: 20%; 
     height: 100%; 
     background-color: rgb(145, 145, 145); 
     border-radius: 50px; 

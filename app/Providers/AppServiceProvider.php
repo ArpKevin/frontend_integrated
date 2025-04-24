@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
 use App\View\Composers\TopUserComposer;
+use App\View\Composers\ProgressBarComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         View::composer(['*'], TopUserComposer::class);
+        View::composer(['*'], ProgressBarComposer::class);
     }
 }

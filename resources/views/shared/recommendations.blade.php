@@ -1,4 +1,4 @@
-<span class="header">Top users</span>
+<span class="header">Most Active Posters</span>
 
 <div class="feedDiv" id="recommendations">
 
