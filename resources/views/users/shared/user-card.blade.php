@@ -29,6 +29,7 @@
 
     <p class="text-center mt-4">Bio: {{ $user->bio }}</p>
 
+    @auth
     <div class="profileButtons">
         @if (auth()->check() && auth()->user()->id === $user->id)
             <button id="profileEdit"><a href="{{ route('users.edit', $user->id) }}">Edit profile</a></button>
@@ -46,6 +47,7 @@
             @endif
         @endif
     </div>
+    @endauth
 
     <hr id="largeScreenHr">
 
