@@ -56,7 +56,7 @@ class User extends Authenticatable
             return url('storage/'. $this->image);
         }
         else{
-            return "https://api.dicebear.com/6.x/fun-emoji/svg?seed=" . $this->name;
+            return "https://api.dicebear.com/6.x/fun-emoji/svg?seed=" . urlencode($this->name);
         }
     }
 
