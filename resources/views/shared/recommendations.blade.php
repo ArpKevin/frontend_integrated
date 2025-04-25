@@ -6,7 +6,7 @@
         <div class="user">
             <div class="feedPicture" style="background-image: url('{{ $topUser->getImageURL() }}')"></div>
             <div class="feedName">
-                <p style="margin-bottom: 0"><a href="{{ route('profile', $topUser->id) }}">{{ $topUser->name }}</a></p>
+                <p style="margin-bottom: 0"><a href="{{ route('users.show', $topUser->id) }}">{{ $topUser->name }}</a></p>
             </div>
         </div>
     @empty
